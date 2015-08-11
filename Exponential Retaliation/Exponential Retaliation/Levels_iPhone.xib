@@ -62,7 +62,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" id="rqg-PE-jwU">
-                    <rect key="frame" x="0.0" y="192" width="320" height="368.00000024878466"/>
+                    <rect key="frame" x="0.0" y="192" width="320" height="368"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" id="ums-5z-bRP">
