@@ -111,6 +111,12 @@
 		D491D3351851C77400E8C16B /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D491D3331851C77400E8C16B /* ViewController_iPad.xib */; };
 		D491D3391851C9FC00E8C16B /* Levels_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = D491D3371851C9FC00E8C16B /* Levels_iPhone.m */; };
 		D491D33A1851C9FC00E8C16B /* Levels_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = D491D3381851C9FC00E8C16B /* Levels_iPhone.xib */; };
+		D4C234411B7E727000B42AA6 /* EI_Jazz_One.wav in Resources */ = {isa = PBXBuildFile; fileRef = D4C2343F1B7E727000B42AA6 /* EI_Jazz_One.wav */; };
+		D4C234421B7E727000B42AA6 /* EI_Jazz_Two.wav in Resources */ = {isa = PBXBuildFile; fileRef = D4C234401B7E727000B42AA6 /* EI_Jazz_Two.wav */; };
+		D4C234471B7E759000B42AA6 /* music-off.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C234431B7E759000B42AA6 /* music-off.png */; };
+		D4C234481B7E759000B42AA6 /* music-off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C234441B7E759000B42AA6 /* music-off@2x.png */; };
+		D4C234491B7E759000B42AA6 /* music-on.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C234451B7E759000B42AA6 /* music-on.png */; };
+		D4C2344A1B7E759000B42AA6 /* music-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C234461B7E759000B42AA6 /* music-on@2x.png */; };
 		D4D7F1A718E53E1200234274 /* campaign-button-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D7F1A318E53E1200234274 /* campaign-button-pressed.png */; };
 		D4D7F1A818E53E1200234274 /* campaign-button-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D7F1A418E53E1200234274 /* campaign-button-pressed@2x.png */; };
 		D4D7F1A918E53E1200234274 /* campaign-button.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D7F1A518E53E1200234274 /* campaign-button.png */; };
@@ -309,6 +315,12 @@
 		D491D3361851C9FC00E8C16B /* Levels_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Levels_iPhone.h; sourceTree = "<group>"; };
 		D491D3371851C9FC00E8C16B /* Levels_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Levels_iPhone.m; sourceTree = "<group>"; usesTabs = 0; };
 		D491D3381851C9FC00E8C16B /* Levels_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Levels_iPhone.xib; sourceTree = "<group>"; };
+		D4C2343F1B7E727000B42AA6 /* EI_Jazz_One.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = EI_Jazz_One.wav; sourceTree = "<group>"; };
+		D4C234401B7E727000B42AA6 /* EI_Jazz_Two.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = EI_Jazz_Two.wav; sourceTree = "<group>"; };
+		D4C234431B7E759000B42AA6 /* music-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "music-off.png"; sourceTree = "<group>"; };
+		D4C234441B7E759000B42AA6 /* music-off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "music-off@2x.png"; sourceTree = "<group>"; };
+		D4C234451B7E759000B42AA6 /* music-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "music-on.png"; sourceTree = "<group>"; };
+		D4C234461B7E759000B42AA6 /* music-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "music-on@2x.png"; sourceTree = "<group>"; };
 		D4D7F1A318E53E1200234274 /* campaign-button-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "campaign-button-pressed.png"; sourceTree = "<group>"; };
 		D4D7F1A418E53E1200234274 /* campaign-button-pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "campaign-button-pressed@2x.png"; sourceTree = "<group>"; };
 		D4D7F1A518E53E1200234274 /* campaign-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "campaign-button.png"; sourceTree = "<group>"; };
@@ -568,6 +580,8 @@
 			children = (
 				D4E168441849F6190055070F /* key_press.wav */,
 				D482F3AE1846EB730076D1BD /* finger_snap.wav */,
+				D4C2343F1B7E727000B42AA6 /* EI_Jazz_One.wav */,
+				D4C234401B7E727000B42AA6 /* EI_Jazz_Two.wav */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -691,6 +705,10 @@
 		D4DE68C61AA2AC5B0095473D /* New Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				D4C234431B7E759000B42AA6 /* music-off.png */,
+				D4C234441B7E759000B42AA6 /* music-off@2x.png */,
+				D4C234451B7E759000B42AA6 /* music-on.png */,
+				D4C234461B7E759000B42AA6 /* music-on@2x.png */,
 				D483B3A81AB69541009ACC0B /* play-edit.png */,
 				D483B3A91AB69541009ACC0B /* play-edit@2x.png */,
 				D483B3AA1AB69541009ACC0B /* play-edit-pressed@2x.png */,
@@ -809,8 +827,10 @@
 				D4D7F1AF18E53F6500234274 /* editor-button-pressed.png in Resources */,
 				D4DE68CB1AA2AC5B0095473D /* campaign-pressed.png in Resources */,
 				D48C69F718B77255001EFD33 /* header-bar.png in Resources */,
+				D4C234481B7E759000B42AA6 /* music-off@2x.png in Resources */,
 				D4541A97192ECF2E00B51554 /* restart-pressed.png in Resources */,
 				D48C6A1518B7726F001EFD33 /* prestige-empty.png in Resources */,
+				D4C234421B7E727000B42AA6 /* EI_Jazz_Two.wav in Resources */,
 				D48C6A0918B77255001EFD33 /* tool-bar@2x.png in Resources */,
 				D4DE69011AA444C50095473D /* cancel.png in Resources */,
 				D407D1A118B5BE61003D3840 /* open-button.png in Resources */,
@@ -878,6 +898,7 @@
 				D48C6A0C18B77255001EFD33 /* wall-piece.png in Resources */,
 				D407D1A618B5BE7B003D3840 /* tower-button.png in Resources */,
 				D4141A841A8F14AD00B20DCF /* tower-piece-3@2x.png in Resources */,
+				D4C2344A1B7E759000B42AA6 /* music-on@2x.png in Resources */,
 				D4141A821A8F14AD00B20DCF /* tower-piece-2@2x.png in Resources */,
 				D4DE68F91AA300990095473D /* encryption-complete.png in Resources */,
 				D402D57E18BB252B001793E6 /* about-button@2x.png in Resources */,
@@ -891,6 +912,7 @@
 				D48C69FE18B77255001EFD33 /* open-piece.png in Resources */,
 				D4541A9A192ECF2E00B51554 /* restart@2x.png in Resources */,
 				D4DE68A91AA128730095473D /* tweet@2x.png in Resources */,
+				D4C234491B7E759000B42AA6 /* music-on.png in Resources */,
 				D4DE68F41AA2DB440095473D /* retry-pressed@2x.png in Resources */,
 				D4D7F1A918E53E1200234274 /* campaign-button.png in Resources */,
 				D4DE68E51AA2CDE20095473D /* game-center-pressed.png in Resources */,
@@ -924,6 +946,7 @@
 				D48C6A0518B77255001EFD33 /* selected-piece@2x.png in Resources */,
 				D4D7F1B018E53F6500234274 /* editor-button-pressed@2x.png in Resources */,
 				D4DE68891A9464E60095473D /* doubler-piece@2x.png in Resources */,
+				D4C234411B7E727000B42AA6 /* EI_Jazz_One.wav in Resources */,
 				D48C6A0818B77255001EFD33 /* tool-bar.png in Resources */,
 				D402D56E18BABC8D001793E6 /* play-button-pressed@2x.png in Resources */,
 				D4141A811A8F14AD00B20DCF /* tower-piece-2.png in Resources */,
@@ -933,6 +956,7 @@
 				D4DD5948184974AF002193EF /* right-button@2x.png in Resources */,
 				D4DD5946184974AF002193EF /* left-button@2x.png in Resources */,
 				D483B3B61AB69541009ACC0B /* create-new-pressed@2x.png in Resources */,
+				D4C234471B7E759000B42AA6 /* music-off.png in Resources */,
 				D483B3B11AB69541009ACC0B /* play-edit@2x.png in Resources */,
 				D402D58718BB252B001793E6 /* about-button.png in Resources */,
 				D4EDEBBB18B73FC100EEB7F8 /* left-button-pressed@2x.png in Resources */,

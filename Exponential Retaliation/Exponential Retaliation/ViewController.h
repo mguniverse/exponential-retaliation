@@ -13,10 +13,17 @@
     int currentSelection;
     int buttonRadius;
     
+    float animationSpeed;
+    
     BOOL isJiggling;
+    BOOL music;
+    BOOL animating;
     
     IBOutlet UIButton *campaignButton;
     IBOutlet UIButton *editorButton;
+    
+    IBOutlet UIImageView *musicImage;
+    IBOutlet UIImageView *musicFlashImage;
     
     jsJiggle *nucleus;
     IBOutlet UIImageView *nucleusImage;

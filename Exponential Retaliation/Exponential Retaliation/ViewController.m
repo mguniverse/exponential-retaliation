@@ -37,6 +37,31 @@
     }
 }
 
+-(IBAction)toggleMusic {
+    musicFlashImage.alpha = 0;
+    musicFlashImage.transform = CGAffineTransformMakeScale(1.0f, 1.0f);
+    
+    if (music == false) {
+        music = true;
+        [musicImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"music-off.png"]]];
+        [musicFlashImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"music-off.png"]]];
+        musicFlashImage.alpha = 1;
+    }
+    else {
+        music = false;
+        [musicFlashImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"music-on.png"]]];
+        [musicImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"music-on.png"]]];
+        musicFlashImage.alpha = 1;
+    }
+    
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:animationSpeed];
+    [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+    musicFlashImage.alpha = 0;
+    musicFlashImage.transform = CGAffineTransformMakeScale(2.0f, 2.0f);
+    [UIView commitAnimations];
+}
+
 -(void)hideAllButtons {
 }
 
@@ -52,8 +77,11 @@
 - (void)viewDidLoad
 {
     buttonRadius = 10;
+    animationSpeed = 0.5;
     nucleus = [[jsJiggle alloc]initWithObject:nucleusImage];
     isJiggling = false;
+    
+    music = [[NSUserDefaults standardUserDefaults] integerForKey:@"savedMusic"];
     
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.

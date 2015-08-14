@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F25a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
                 <outlet property="campaignButton" destination="L3R-yb-NMQ" id="UJs-UO-HMa"/>
                 <outlet property="editorButton" destination="oun-iZ-DqB" id="1By-S3-l5j"/>
+                <outlet property="musicFlashImage" destination="cZy-Cz-qPm" id="x7G-dJ-1oj"/>
+                <outlet property="musicImage" destination="y9U-g3-0dN" id="imp-bD-nup"/>
                 <outlet property="nucleusImage" destination="icE-WA-S55" id="CYY-ob-zom"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
@@ -83,6 +85,21 @@
                     <state key="selected" image="game-center-pressed.png"/>
                     <state key="highlighted" image="game-center-pressed.png"/>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music-on.png" id="y9U-g3-0dN">
+                    <rect key="frame" x="8" y="8" width="64" height="64"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music-on.png" id="cZy-Cz-qPm">
+                    <rect key="frame" x="8" y="8" width="64" height="64"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SFh-Zr-Ybf">
+                    <rect key="frame" x="8" y="8" width="64" height="64"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <connections>
+                        <action selector="toggleMusic" destination="-1" eventType="touchUpInside" id="s6L-wp-gXx"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
@@ -97,6 +114,7 @@
         <image name="game-center-pressed.png" width="64" height="64"/>
         <image name="game-center.png" width="64" height="64"/>
         <image name="logo.png" width="185" height="185"/>
+        <image name="music-on.png" width="64" height="64"/>
         <image name="nucleus.png" width="185" height="185"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
