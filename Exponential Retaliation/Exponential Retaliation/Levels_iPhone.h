@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "jsJiggle.h"
 #import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 #import <Twitter/Twitter.h>
 
 @interface Levels_iPhone : UIViewController {

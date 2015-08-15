@@ -7,13 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 @class ViewController;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate> {
+    AVAudioPlayer *music;
+    int delayIntensity;
+    BOOL musicDisabled;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) ViewController *viewController;
+
+-(void)startMusic;
+-(void)muteMusic;
+-(void)unmuteMusic;
+
+@property(nonatomic, strong) AVAudioPlayer *music;
+
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
 #import "Levels_iPhone.h"
 #import "Editor_iPhone.h"
 
@@ -41,17 +42,23 @@
     musicFlashImage.alpha = 0;
     musicFlashImage.transform = CGAffineTransformMakeScale(1.0f, 1.0f);
     
-    if (music == false) {
-        music = true;
+    if (musicToggle == false) {
+        musicToggle = true;
         [musicImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"music-off.png"]]];
         [musicFlashImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"music-off.png"]]];
         musicFlashImage.alpha = 1;
+        AppDelegate *appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+        [appDelegate.music stop];
+        [appDelegate muteMusic];
     }
     else {
-        music = false;
+        musicToggle = false;
         [musicFlashImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"music-on.png"]]];
         [musicImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"music-on.png"]]];
         musicFlashImage.alpha = 1;
+        AppDelegate *appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+        [appDelegate.music play];
+        [appDelegate unmuteMusic];
     }
     
     [UIView beginAnimations:nil context:nil];
@@ -81,7 +88,19 @@
     nucleus = [[jsJiggle alloc]initWithObject:nucleusImage];
     isJiggling = false;
     
-    music = [[NSUserDefaults standardUserDefaults] integerForKey:@"savedMusic"];
+    musicToggle = [[NSUserDefaults standardUserDefaults] integerForKey:@"savedMusic"];
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"musicDisabled"]) {
+        [musicImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"music-off.png"]]];
+        musicToggle = true;
+    }
+    else {
+        [musicImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"music-on.png"]]];
+        musicToggle = false;
+    }
+    
+    AppDelegate *appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    [appDelegate startMusic];
     
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.

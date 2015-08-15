@@ -12,6 +12,8 @@
 
 @implementation AppDelegate
 
+@synthesize music;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -24,6 +26,29 @@
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+-(void)startMusic {
+    //this line of code allows you to listen to music on iOS in the background
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:nil];
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"el_jazz_1" ofType:@"wav"];
+    music = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+    music.numberOfLoops = -1;
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"musicDisabled"]) {
+    }
+    else {
+        [music play];
+    }
+}
+
+-(void)muteMusic {
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"musicDisabled"];
+}
+
+-(void)unmuteMusic {
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"musicDisabled"];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

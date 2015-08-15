@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "jsJiggle.h"
+#import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface ViewController : UIViewController {
     int currentSelection;
@@ -16,7 +18,7 @@
     float animationSpeed;
     
     BOOL isJiggling;
-    BOOL music;
+    BOOL musicToggle;
     BOOL animating;
     
     IBOutlet UIButton *campaignButton;
