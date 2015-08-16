@@ -38,12 +38,12 @@
     NSInteger currentSecond = [components second];
     
     if (currentHour < 7 || (currentHour > 19 || (currentHour == 21 && (currentMinute > 0 || currentSecond > 0)))) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"el_jazz_1" ofType:@"wav"];
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"el_jazz_2" ofType:@"wav"];
         music = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
         music.numberOfLoops = -1;
     }
-    if (currentHour < 7 || (currentHour > 19 || (currentHour == 21 && (currentMinute > 0 || currentSecond > 0)))) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"el_jazz_2" ofType:@"wav"];
+    else {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"el_jazz_1" ofType:@"wav"];
         music = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
         music.numberOfLoops = -1;
     }
