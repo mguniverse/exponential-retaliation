@@ -16,6 +16,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //required ViewController setup code
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
@@ -32,11 +33,13 @@
     //this line of code allows you to listen to music on iOS in the background
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:nil];
     
+    //checks current time to determine which music needs to be played
     NSDateComponents *components = [[NSCalendar currentCalendar] components:NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit fromDate:[NSDate date]];
     NSInteger currentHour = [components hour];
     NSInteger currentMinute = [components minute];
     NSInteger currentSecond = [components second];
     
+    //between 7 AM and 7 PM, the game will play El Jazz One
     if (currentHour < 7 || (currentHour > 19 || (currentHour == 21 && (currentMinute > 0 || currentSecond > 0)))) {
         NSString *path = [[NSBundle mainBundle] pathForResource:@"el_jazz_2" ofType:@"wav"];
         music = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
@@ -48,6 +51,7 @@
         music.numberOfLoops = -1;
     }
     
+    //only play the music if music is enabled
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"musicDisabled"]) {
     }
     else {
@@ -55,10 +59,12 @@
     }
 }
 
+//mutes the music, saves to memory
 -(void)muteMusic {
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"musicDisabled"];
 }
 
+//unmuted the music, saves to memory
 -(void)unmuteMusic {
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"musicDisabled"];
 }
