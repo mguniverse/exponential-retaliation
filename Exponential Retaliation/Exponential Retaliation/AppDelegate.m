@@ -32,9 +32,21 @@
     //this line of code allows you to listen to music on iOS in the background
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:nil];
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"el_jazz_1" ofType:@"wav"];
-    music = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
-    music.numberOfLoops = -1;
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit fromDate:[NSDate date]];
+    NSInteger currentHour = [components hour];
+    NSInteger currentMinute = [components minute];
+    NSInteger currentSecond = [components second];
+    
+    if (currentHour < 7 || (currentHour > 19 || (currentHour == 21 && (currentMinute > 0 || currentSecond > 0)))) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"el_jazz_1" ofType:@"wav"];
+        music = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+        music.numberOfLoops = -1;
+    }
+    if (currentHour < 7 || (currentHour > 19 || (currentHour == 21 && (currentMinute > 0 || currentSecond > 0)))) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"el_jazz_2" ofType:@"wav"];
+        music = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+        music.numberOfLoops = -1;
+    }
     
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"musicDisabled"]) {
     }

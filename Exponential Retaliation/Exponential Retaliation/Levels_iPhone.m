@@ -500,8 +500,9 @@
     endView.alpha = 0;
     evaluationView.alpha = 0;
     
+    //checks to see if current level is odd
     if (currentLevel & 1) {
-        NSLog(@"The current level is odd.");
+        //NSLog(@"The current level is odd.");
     }
 }
 
