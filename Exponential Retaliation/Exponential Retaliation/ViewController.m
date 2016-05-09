@@ -18,6 +18,10 @@
 @implementation ViewController
 
 -(IBAction)startGame {
+    //stops the jiggling before switching views
+    [nucleus stopJiggle];
+    isJiggling = false;
+    
     Levels_iPhone *mvc =[[Levels_iPhone alloc] initWithNibName:@"Levels_iPhone" bundle:nil];
     [self presentViewController:mvc animated:NO completion:nil];
 }

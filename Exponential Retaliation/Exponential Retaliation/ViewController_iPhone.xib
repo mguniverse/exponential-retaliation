@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F25a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
                 <outlet property="campaignButton" destination="L3R-yb-NMQ" id="UJs-UO-HMa"/>
-                <outlet property="editorButton" destination="oun-iZ-DqB" id="1By-S3-l5j"/>
                 <outlet property="musicFlashImage" destination="cZy-Cz-qPm" id="x7G-dJ-1oj"/>
                 <outlet property="musicImage" destination="y9U-g3-0dN" id="imp-bD-nup"/>
                 <outlet property="nucleusImage" destination="icE-WA-S55" id="CYY-ob-zom"/>
@@ -17,42 +16,30 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="1">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" id="HlM-9n-OEp">
-                    <rect key="frame" x="0.0" y="90" width="320" height="387"/>
+                    <rect key="frame" x="28" y="139" width="320" height="387"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THE GAME AFTER MATHEMATICAL WARFARE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1Qu-in-zJy">
-                            <rect key="frame" x="0.0" y="213" width="320" height="26"/>
+                            <rect key="frame" x="0.0" y="242" width="320" height="26"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                             <color key="textColor" red="0.25098040699958801" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" id="jPg-9Q-AkC">
-                            <rect key="frame" x="68" y="20" width="185" height="185"/>
+                            <rect key="frame" x="68" y="49" width="185" height="185"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nucleus.png" id="icE-WA-S55">
-                            <rect key="frame" x="68" y="20" width="185" height="185"/>
+                            <rect key="frame" x="68" y="49" width="185" height="185"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oun-iZ-DqB">
-                            <rect key="frame" x="60" y="317" width="200" height="50"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <state key="normal" image="editor.png"/>
-                            <state key="selected" image="editor-pressed.png"/>
-                            <state key="highlighted" image="editor-pressed.png"/>
-                            <connections>
-                                <action selector="editor" destination="-1" eventType="touchUpInside" id="J7a-oO-UYq"/>
-                            </connections>
-                        </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="L3R-yb-NMQ">
-                            <rect key="frame" x="60" y="259" width="200" height="50"/>
+                            <rect key="frame" x="60" y="288" width="200" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -64,7 +51,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="N6n-Dw-SwE">
-                            <rect key="frame" x="68" y="20" width="185" height="185"/>
+                            <rect key="frame" x="68" y="49" width="185" height="185"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -76,15 +63,6 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OWU-Cr-8w9">
-                    <rect key="frame" x="248" y="8" width="64" height="64"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="game-center.png">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="selected" image="game-center-pressed.png"/>
-                    <state key="highlighted" image="game-center-pressed.png"/>
-                </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music-on.png" id="y9U-g3-0dN">
                     <rect key="frame" x="8" y="8" width="64" height="64"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -100,26 +78,29 @@
                         <action selector="toggleMusic" destination="-1" eventType="touchUpInside" id="s6L-wp-gXx"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OWU-Cr-8w9">
+                    <rect key="frame" x="303" y="8" width="64" height="64"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="game-center.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="game-center-pressed.png"/>
+                    <state key="highlighted" image="game-center-pressed.png"/>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <point key="canvasLocation" x="286" y="294"/>
         </view>
     </objects>
     <resources>
         <image name="campaign-pressed.png" width="200" height="50"/>
         <image name="campaign.png" width="200" height="50"/>
-        <image name="editor-pressed.png" width="200" height="50"/>
-        <image name="editor.png" width="200" height="50"/>
         <image name="game-center-pressed.png" width="64" height="64"/>
         <image name="game-center.png" width="64" height="64"/>
         <image name="logo.png" width="185" height="185"/>
         <image name="music-on.png" width="64" height="64"/>
         <image name="nucleus.png" width="185" height="185"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>
