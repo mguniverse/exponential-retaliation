@@ -64,9 +64,6 @@
     int interface;
     
     int totalPrestige;
-    int level1prestige;
-    int level2prestige;
-    int level3prestige;
     
     int a1n;
     int a2n;
@@ -87,6 +84,27 @@
     int currentBombs;
     int explodeChannel;
     int buttonRadius;
+    
+    int l1pr;
+    int l2pr;
+    int l3pr;
+    int l4pr;
+    int l5pr;
+    int l6pr;
+    int l7pr;
+    int l8pr;
+    int l9pr;
+    int l10pr;
+    int l11pr;
+    int l12pr;
+    int l13pr;
+    int l14pr;
+    int l15pr;
+    int l16pr;
+    int l17pr;
+    int l18pr;
+    int l19pr;
+    int l20pr;
     
     float animationIntensity;
     float animationSpeed;

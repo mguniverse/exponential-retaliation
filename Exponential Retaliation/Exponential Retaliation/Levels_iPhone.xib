@@ -47,11 +47,14 @@
                 <outlet property="descriptionLabel" destination="2MQ-TA-juW" id="S8o-HX-DmX"/>
                 <outlet property="endBanner" destination="QU6-Ui-xEX" id="wt6-va-coy"/>
                 <outlet property="endView" destination="Zph-9T-Ujg" id="DSW-Db-9Fn"/>
+                <outlet property="evaluationLabel" destination="6st-uY-wUV" id="Z8K-7T-xFK"/>
+                <outlet property="evaluationText" destination="SVh-d8-YUq" id="2FT-ZI-23K"/>
                 <outlet property="evaluationView" destination="Djw-HD-dXC" id="MaF-dw-fAl"/>
                 <outlet property="gridView" destination="ums-5z-bRP" id="6O1-xw-7yi"/>
                 <outlet property="headerView" destination="jW8-Dc-cKp" id="Mrg-cW-6rJ"/>
                 <outlet property="levelLabel" destination="5p1-bk-LPU" id="gd7-kE-0jU"/>
                 <outlet property="levelLock" destination="j8m-7e-5Nm" id="53d-NC-X0t"/>
+                <outlet property="prestige" destination="1nl-ZJ-0vC" id="n2L-aO-Tng"/>
                 <outlet property="restartButton" destination="N4T-GT-EWV" id="zcp-qC-vOa"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
@@ -399,6 +402,10 @@
                                 <action selector="mainMenu" destination="-1" eventType="touchUpInside" id="SJc-49-pmj"/>
                             </connections>
                         </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prestige-missing-emblem.png" id="1nl-ZJ-0vC">
+                            <rect key="frame" x="155" y="0.0" width="64" height="64"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" red="0.25098040699958801" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
@@ -411,7 +418,7 @@
                     <rect key="frame" x="53" y="224" width="270" height="220"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="TRY AGAIN WITH 003 LESS STEPS TO REACH PRESTIGE." textAlignment="center" id="SVh-d8-YUq">
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="TRY AGAIN WITH 003 LESS STEPS TO REACH PRESTIGE." textAlignment="center" id="SVh-d8-YUq">
                             <rect key="frame" x="8" y="82" width="254" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -486,6 +493,7 @@
         <image name="next-pressed.png" width="100" height="50"/>
         <image name="next.png" width="100" height="50"/>
         <image name="open-piece.png" width="55" height="55"/>
+        <image name="prestige-missing-emblem.png" width="64" height="64"/>
         <image name="restart-pressed.png" width="40" height="40"/>
         <image name="restart.png" width="40" height="40"/>
         <image name="retry-pressed.png" width="100" height="50"/>

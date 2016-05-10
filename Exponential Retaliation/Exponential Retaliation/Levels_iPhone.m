@@ -40,6 +40,10 @@
         
         gridView.transform = CGAffineTransformMakeTranslation(160, 0);
         gridView.alpha = 0;
+        //prestige.transform = CGAffineTransformMakeTranslation(160, 0);
+        //prestige.alpha = 0;
+        //descriptionLabel.transform = CGAffineTransformMakeTranslation(160, 0);
+        //descriptionLabel.alpha = 0;
         
         [UIView commitAnimations];
         
@@ -54,6 +58,8 @@
     }
     [self level:currentLevel];
     gridView.transform = CGAffineTransformMakeTranslation(-160, 0);
+    //prestige.transform = CGAffineTransformMakeTranslation(-160, 0);
+    //descriptionLabel.transform = CGAffineTransformMakeTranslation(-160, 0);
     
     [self setLevelPosition];
 }
@@ -68,6 +74,10 @@
         
         gridView.transform = CGAffineTransformMakeTranslation(-160, 0);
         gridView.alpha = 0;
+        //prestige.transform = CGAffineTransformMakeTranslation(-160, 0);
+        //prestige.alpha = 0;
+        //descriptionLabel.transform = CGAffineTransformMakeTranslation(-160, 0);
+        //descriptionLabel.alpha = 0;
         
         [UIView commitAnimations];
         
@@ -82,6 +92,8 @@
     }
     [self level:currentLevel];
     gridView.transform = CGAffineTransformMakeTranslation(160, 0);
+    //prestige.transform = CGAffineTransformMakeTranslation(160, 0);
+    //descriptionLabel.transform = CGAffineTransformMakeTranslation(160, 0);
     
     [self setLevelPosition];
 }
@@ -93,14 +105,15 @@
     
     gridView.transform = CGAffineTransformMakeTranslation(0, 0);
     gridView.alpha = 1;
+    //prestige.transform = CGAffineTransformMakeTranslation(0, 0);
+    //prestige.alpha = 1;
+    //descriptionLabel.transform = CGAffineTransformMakeTranslation(0, 0);
+    //descriptionLabel.alpha = 1;
     
     [UIView commitAnimations];
 }
 
 -(void)menuInterface {
-    leftButton.hidden = false;
-    rightButton.hidden = false;
-    
     restartButton.hidden = true;
     cancelButton.hidden = true;
     levelSelectButton.hidden = true;
@@ -114,9 +127,6 @@
 }
 
 -(void)gameplayInterface {
-    leftButton.hidden = true;
-    rightButton.hidden = true;
-    
     cancelButton.hidden = false;
     levelSelectButton.hidden = false;
     
@@ -384,7 +394,7 @@
         a1wall = true;
         c3split = true;
         towers = 4;
-        topSteps = 7;
+        topSteps = 8;
     }
     if (currentLevel == 18) {
         currentLevel = 18;
@@ -401,7 +411,7 @@
         b3split = true;
         c1split = true;
         towers = 3;
-        topSteps = 7;
+        topSteps = 10;
     }
     if (currentLevel == 19) {
         currentLevel = 19;
@@ -418,7 +428,7 @@
         b2split = true;
         c3split = true;
         towers = 4;
-        topSteps = 7;
+        topSteps = 8;
     }
     if (currentLevel == 20) {
         currentLevel = 20;
@@ -434,7 +444,7 @@
         c3wall = true;
         b2split = true;
         towers = 2;
-        topSteps = 7;
+        topSteps = 8;
     }
     [self loadLevel];
 }
@@ -460,6 +470,7 @@
  totalBombs = level1bombs + level2bombs + level3bombs + level4bombs + level5bombs + level6bombs + level7bombs + level8bombs + level9bombs + level10bombs + level11bombs + level12bombs + level13bombs + level14bombs + level15bombs + level16bombs + level17bombs + level18bombs + level19bombs + level20bombs + level21bombs + level22bombs + level23bombs + level24bombs + level25bombs + level26bombs + level27bombs + level28bombs + level29bombs + level30bombs + level31bombs + level32bombs + level33bombs + level34bombs + level35bombs + level36bombs;
  bombsLabel.text = [NSString stringWithFormat:@"%i/%i BOMBS IGNITED", totalBombs, levelsCount * 3];
  }
+ */
 
  -(void)loadProgress {
      //[self resetProgress];
@@ -469,16 +480,16 @@
      }
  //NSLog(@"Progress loaded, progress is %i and currentLevel is %i", progress, currentLevel);
  }
-*/
 
 -(void)loadLevel {
     [self freshGrid];
-    //[self loadProgress];
+    [self loadProgress];
     
     steps = 0;
     nilSteps = towers;
     
     [self loadLabels];
+    [self loadPrestige];
     
     a1l.text = [NSString stringWithFormat:@"%i", a1n];
     a2l.text = [NSString stringWithFormat:@"%i", a2n];
@@ -502,7 +513,7 @@
     
     //checks to see if current level is odd
     if (currentLevel & 1) {
-        //NSLog(@"The current level is odd.");
+        NSLog(@"The current level is odd.");
     }
 }
 
@@ -519,10 +530,8 @@
     [UIView commitAnimations];
     
     if (interface == 0) {
-        //load current level into the label
         levelLabel.text = [NSString stringWithFormat:@"LEVEL SELECT"];
         
-        //load steps into the label
         if (currentLevel < 10) {
             descriptionLabel.text = [NSString stringWithFormat:@"ENCRYPTION 00%i", currentLevel];
         }
@@ -546,7 +555,6 @@
         
         [UIView commitAnimations];
         
-        //load current level into the label
         if (currentLevel < 10) {
             levelLabel.text = [NSString stringWithFormat:@"ENCRYPTION 00%i", currentLevel];
         }
@@ -557,7 +565,6 @@
             levelLabel.text = [NSString stringWithFormat:@"ENCRYPTION %i", currentLevel];
         }
         
-        //load steps into the label
         if (topSteps < 10) {
             descriptionLabel.text = [NSString stringWithFormat:@"00%i STEPS TO PRESTIGE", topSteps];
         }
@@ -570,13 +577,174 @@
     }
 }
 
+-(void)loadPrestige {
+    if (currentLevel == 1) {
+        if (l1pr == 1) {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
+        }
+        else {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-missing-emblem.png"]]];
+        }
+    }
+    else if (currentLevel == 2) {
+        if (l2pr == 2) {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
+        }
+        else {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-missing-emblem.png"]]];
+        }
+    }
+    else if (currentLevel == 3) {
+        if (l1pr == 3) {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
+        }
+        else {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-missing-emblem.png"]]];
+        }
+    }
+    else if (currentLevel == 4) {
+        if (l1pr == 4) {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
+        }
+        else {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-missing-emblem.png"]]];
+        }
+    }
+    else if (currentLevel == 5) {
+        if (l1pr == 5) {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
+        }
+        else {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-missing-emblem.png"]]];
+        }
+    }
+    else if (currentLevel == 6) {
+        if (l1pr == 6) {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
+        }
+        else {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-missing-emblem.png"]]];
+        }
+    }
+    else if (currentLevel == 7) {
+        if (l1pr == 7) {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
+        }
+        else {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-missing-emblem.png"]]];
+        }
+    }
+    else if (currentLevel == 8) {
+        if (l1pr == 8) {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
+        }
+        else {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-missing-emblem.png"]]];
+        }
+    }
+    else if (currentLevel == 9) {
+        if (l1pr == 9) {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
+        }
+        else {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-missing-emblem.png"]]];
+        }
+    }
+    else if (currentLevel == 10) {
+        if (l1pr == 10) {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
+        }
+        else {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-missing-emblem.png"]]];
+        }
+    }
+    else if (currentLevel == 11) {
+        if (l1pr == 11) {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
+        }
+        else {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-missing-emblem.png"]]];
+        }
+    }
+    else if (currentLevel == 12) {
+        if (l1pr == 12) {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
+        }
+        else {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-missing-emblem.png"]]];
+        }
+    }
+    if (currentLevel == 13) {
+        if (l1pr == 13) {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
+        }
+        else {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-missing-emblem.png"]]];
+        }
+    }
+    if (currentLevel == 14) {
+        if (l1pr == 14) {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
+        }
+        else {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-missing-emblem.png"]]];
+        }
+    }
+    if (currentLevel == 15) {
+        if (l1pr == 15) {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
+        }
+        else {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-missing-emblem.png"]]];
+        }
+    }
+    if (currentLevel == 16) {
+        if (l1pr == 16) {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
+        }
+        else {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-missing-emblem.png"]]];
+        }
+    }
+    if (currentLevel == 17) {
+        if (l1pr == 17) {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
+        }
+        else {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-missing-emblem.png"]]];
+        }
+    }
+    if (currentLevel == 18) {
+        if (l1pr == 18) {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
+        }
+        else {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-missing-emblem.png"]]];
+        }
+    }
+    if (currentLevel == 19) {
+        if (l1pr == 19) {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
+        }
+        else {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-missing-emblem.png"]]];
+        }
+    }
+    if (currentLevel == 20) {
+        if (l1pr == 20) {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
+        }
+        else {
+            [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-missing-emblem.png"]]];
+        }
+    }
+}
+
 -(void)winLevel {
-    /*
      if (currentLevel >= progress) {
      progress = currentLevel + 1;
      [[NSUserDefaults standardUserDefaults] setInteger:progress forKey:@"savedProgress"];
      }
-     */
     
     evaluationView.transform = CGAffineTransformMakeTranslation(128, 0);
     
@@ -585,15 +753,97 @@
     steps = steps - nilSteps;
     
     if (steps <= topSteps) {
-        [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete.png"]]];
         evaluationLabel.text = [NSString stringWithFormat:@"ENCRYPTION COMPLETE"];
         evaluationText.text = [NSString stringWithFormat:@"YOU HAVE ACHIEVED PRESTIGE WITH %i STEPS.", steps];
+        [self updatePrestige];
     }
     
     if (steps > topSteps) {
-        [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-empty.png"]]];
         evaluationLabel.text = [NSString stringWithFormat:@"ENCRYPTION COMPLETE"];
         evaluationText.text = [NSString stringWithFormat:@"TRY AGAIN WITH %i LESS STEPS TO REACH PRESTIGE.", steps-topSteps];
+    }
+}
+
+-(void)updatePrestige {
+    if (currentLevel == 1) {
+        l1pr = 1;
+        [[NSUserDefaults standardUserDefaults] setInteger:l1pr forKey:@"savedPrestige1"];
+    }
+    else if (currentLevel == 2) {
+        l2pr = 1;
+        [[NSUserDefaults standardUserDefaults] setInteger:l2pr forKey:@"savedPrestige2"];
+    }
+    else if (currentLevel == 3) {
+        l3pr = 1;
+        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige3"];
+    }
+    else if (currentLevel == 4) {
+        l4pr = 1;
+        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige4"];
+    }
+    else if (currentLevel == 5) {
+        l5pr = 1;
+        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige5"];
+    }
+    else if (currentLevel == 6) {
+        l6pr = 1;
+        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige6"];
+    }
+    else if (currentLevel == 7) {
+        l7pr = 1;
+        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige7"];
+    }
+    else if (currentLevel == 8) {
+        l8pr = 1;
+        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige8"];
+    }
+    else if (currentLevel == 9) {
+        l9pr = 1;
+        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige9"];
+    }
+    else if (currentLevel == 10) {
+        l10pr = 1;
+        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige10"];
+    }
+    else if (currentLevel == 11) {
+        l11pr = 1;
+        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige11"];
+    }
+    else if (currentLevel == 12) {
+        l12pr = 1;
+        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige12"];
+    }
+    else if (currentLevel == 13) {
+        l13pr = 1;
+        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige13"];
+    }
+    else if (currentLevel == 14) {
+        l14pr = 1;
+        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige14"];
+    }
+    else if (currentLevel == 15) {
+        l15pr = 1;
+        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige15"];
+    }
+    else if (currentLevel == 16) {
+        l16pr = 1;
+        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige16"];
+    }
+    else if (currentLevel == 17) {
+        l17pr = 1;
+        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige17"];
+    }
+    else if (currentLevel == 18) {
+        l18pr = 1;
+        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige18"];
+    }
+    else if (currentLevel == 19) {
+        l19pr = 1;
+        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige19"];
+    }
+    else if (currentLevel == 20) {
+        l20pr = 1;
+        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige20"];
     }
 }
 
@@ -3269,11 +3519,36 @@
     animating = false;
     
     //progress = [[NSUserDefaults standardUserDefaults] integerForKey:@"savedProgress"];
-    //progress = 10;
+    progress = 20;
     
-    //[self loadProgress];
+    l1pr = 0;
+    l2pr = 0;
+    l3pr = 0;
+    l4pr = 0;
+    l5pr = 0;
+    l6pr = 0;
+    l7pr = 0;
+    l8pr = 0;
+    l9pr = 0;
+    l10pr = 0;
+    l11pr = 0;
+    l12pr = 0;
+    l13pr = 0;
+    l14pr = 0;
+    l15pr = 0;
+    l16pr = 0;
+    l17pr = 0;
+    l18pr = 0;
+    l19pr = 0;
+    l20pr = 0;
     
-    [self menuInterface];
+    [self loadProgress];
+    
+    //the game needs to begin in menu interface without some of the transforms done in menuInterface
+    restartButton.hidden = true;
+    cancelButton.hidden = true;
+    levelSelectButton.hidden = true;
+    interface = 0;
     
     endView.alpha = 0;
     evaluationView.alpha = 0;
