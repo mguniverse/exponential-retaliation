@@ -587,7 +587,7 @@
         }
     }
     else if (currentLevel == 2) {
-        if (l2pr == 2) {
+        if (l2pr == 1) {
             [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
         }
         else {
@@ -595,7 +595,7 @@
         }
     }
     else if (currentLevel == 3) {
-        if (l1pr == 3) {
+        if (l3pr == 1) {
             [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
         }
         else {
@@ -603,7 +603,7 @@
         }
     }
     else if (currentLevel == 4) {
-        if (l1pr == 4) {
+        if (l4pr == 1) {
             [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
         }
         else {
@@ -611,7 +611,7 @@
         }
     }
     else if (currentLevel == 5) {
-        if (l1pr == 5) {
+        if (l5pr == 1) {
             [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
         }
         else {
@@ -619,7 +619,7 @@
         }
     }
     else if (currentLevel == 6) {
-        if (l1pr == 6) {
+        if (l6pr == 1) {
             [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
         }
         else {
@@ -627,7 +627,7 @@
         }
     }
     else if (currentLevel == 7) {
-        if (l1pr == 7) {
+        if (l7pr == 1) {
             [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
         }
         else {
@@ -635,7 +635,7 @@
         }
     }
     else if (currentLevel == 8) {
-        if (l1pr == 8) {
+        if (l8pr == 1) {
             [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
         }
         else {
@@ -643,7 +643,7 @@
         }
     }
     else if (currentLevel == 9) {
-        if (l1pr == 9) {
+        if (l9pr == 1) {
             [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
         }
         else {
@@ -651,7 +651,7 @@
         }
     }
     else if (currentLevel == 10) {
-        if (l1pr == 10) {
+        if (l10pr == 1) {
             [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
         }
         else {
@@ -659,7 +659,7 @@
         }
     }
     else if (currentLevel == 11) {
-        if (l1pr == 11) {
+        if (l11pr == 1) {
             [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
         }
         else {
@@ -667,7 +667,7 @@
         }
     }
     else if (currentLevel == 12) {
-        if (l1pr == 12) {
+        if (l12pr == 1) {
             [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
         }
         else {
@@ -675,7 +675,7 @@
         }
     }
     if (currentLevel == 13) {
-        if (l1pr == 13) {
+        if (l13pr == 1) {
             [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
         }
         else {
@@ -683,7 +683,7 @@
         }
     }
     if (currentLevel == 14) {
-        if (l1pr == 14) {
+        if (l14pr == 1) {
             [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
         }
         else {
@@ -691,7 +691,7 @@
         }
     }
     if (currentLevel == 15) {
-        if (l1pr == 15) {
+        if (l15pr == 1) {
             [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
         }
         else {
@@ -699,7 +699,7 @@
         }
     }
     if (currentLevel == 16) {
-        if (l1pr == 16) {
+        if (l16pr == 1) {
             [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
         }
         else {
@@ -707,7 +707,7 @@
         }
     }
     if (currentLevel == 17) {
-        if (l1pr == 17) {
+        if (l17pr == 1) {
             [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
         }
         else {
@@ -715,7 +715,7 @@
         }
     }
     if (currentLevel == 18) {
-        if (l1pr == 18) {
+        if (l18pr == 1) {
             [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
         }
         else {
@@ -723,7 +723,7 @@
         }
     }
     if (currentLevel == 19) {
-        if (l1pr == 19) {
+        if (l19pr == 1) {
             [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
         }
         else {
@@ -731,7 +731,7 @@
         }
     }
     if (currentLevel == 20) {
-        if (l1pr == 20) {
+        if (l20pr == 1) {
             [prestige setImage:[UIImage imageNamed:[NSString stringWithFormat:@"prestige-complete-emblem.png"]]];
         }
         else {
@@ -779,71 +779,71 @@
     }
     else if (currentLevel == 4) {
         l4pr = 1;
-        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige4"];
+        [[NSUserDefaults standardUserDefaults] setInteger:l4pr forKey:@"savedPrestige4"];
     }
     else if (currentLevel == 5) {
         l5pr = 1;
-        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige5"];
+        [[NSUserDefaults standardUserDefaults] setInteger:l5pr forKey:@"savedPrestige5"];
     }
     else if (currentLevel == 6) {
         l6pr = 1;
-        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige6"];
+        [[NSUserDefaults standardUserDefaults] setInteger:l6pr forKey:@"savedPrestige6"];
     }
     else if (currentLevel == 7) {
         l7pr = 1;
-        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige7"];
+        [[NSUserDefaults standardUserDefaults] setInteger:l7pr forKey:@"savedPrestige7"];
     }
     else if (currentLevel == 8) {
         l8pr = 1;
-        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige8"];
+        [[NSUserDefaults standardUserDefaults] setInteger:l8pr forKey:@"savedPrestige8"];
     }
     else if (currentLevel == 9) {
         l9pr = 1;
-        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige9"];
+        [[NSUserDefaults standardUserDefaults] setInteger:l9pr forKey:@"savedPrestige9"];
     }
     else if (currentLevel == 10) {
         l10pr = 1;
-        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige10"];
+        [[NSUserDefaults standardUserDefaults] setInteger:l10pr forKey:@"savedPrestige10"];
     }
     else if (currentLevel == 11) {
         l11pr = 1;
-        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige11"];
+        [[NSUserDefaults standardUserDefaults] setInteger:l11pr forKey:@"savedPrestige11"];
     }
     else if (currentLevel == 12) {
         l12pr = 1;
-        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige12"];
+        [[NSUserDefaults standardUserDefaults] setInteger:l12pr forKey:@"savedPrestige12"];
     }
     else if (currentLevel == 13) {
         l13pr = 1;
-        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige13"];
+        [[NSUserDefaults standardUserDefaults] setInteger:l13pr forKey:@"savedPrestige13"];
     }
     else if (currentLevel == 14) {
         l14pr = 1;
-        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige14"];
+        [[NSUserDefaults standardUserDefaults] setInteger:l14pr forKey:@"savedPrestige14"];
     }
     else if (currentLevel == 15) {
         l15pr = 1;
-        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige15"];
+        [[NSUserDefaults standardUserDefaults] setInteger:l15pr forKey:@"savedPrestige15"];
     }
     else if (currentLevel == 16) {
         l16pr = 1;
-        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige16"];
+        [[NSUserDefaults standardUserDefaults] setInteger:l16pr forKey:@"savedPrestige16"];
     }
     else if (currentLevel == 17) {
         l17pr = 1;
-        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige17"];
+        [[NSUserDefaults standardUserDefaults] setInteger:l17pr forKey:@"savedPrestige17"];
     }
     else if (currentLevel == 18) {
         l18pr = 1;
-        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige18"];
+        [[NSUserDefaults standardUserDefaults] setInteger:l18pr forKey:@"savedPrestige18"];
     }
     else if (currentLevel == 19) {
         l19pr = 1;
-        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige19"];
+        [[NSUserDefaults standardUserDefaults] setInteger:l19pr forKey:@"savedPrestige19"];
     }
     else if (currentLevel == 20) {
         l20pr = 1;
-        [[NSUserDefaults standardUserDefaults] setInteger:l3pr forKey:@"savedPrestige20"];
+        [[NSUserDefaults standardUserDefaults] setInteger:l20pr forKey:@"savedPrestige20"];
     }
 }
 

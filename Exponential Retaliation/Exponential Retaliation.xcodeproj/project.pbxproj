@@ -118,6 +118,7 @@
 		D4C2344A1B7E759000B42AA6 /* music-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C234461B7E759000B42AA6 /* music-on@2x.png */; };
 		D4C2344D1B7FD6BB00B42AA6 /* el_jazz_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = D4C2344B1B7FD6BB00B42AA6 /* el_jazz_1.wav */; };
 		D4C2344E1B7FD6BB00B42AA6 /* el_jazz_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = D4C2344C1B7FD6BB00B42AA6 /* el_jazz_2.wav */; };
+		D4D341BA1CE306E70050F2E3 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D341B91CE306E70050F2E3 /* GameKit.framework */; };
 		D4D7F1A718E53E1200234274 /* campaign-button-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D7F1A318E53E1200234274 /* campaign-button-pressed.png */; };
 		D4D7F1A818E53E1200234274 /* campaign-button-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D7F1A418E53E1200234274 /* campaign-button-pressed@2x.png */; };
 		D4D7F1A918E53E1200234274 /* campaign-button.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D7F1A518E53E1200234274 /* campaign-button.png */; };
@@ -323,6 +324,7 @@
 		D4C234461B7E759000B42AA6 /* music-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "music-on@2x.png"; sourceTree = "<group>"; };
 		D4C2344B1B7FD6BB00B42AA6 /* el_jazz_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = el_jazz_1.wav; sourceTree = "<group>"; };
 		D4C2344C1B7FD6BB00B42AA6 /* el_jazz_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = el_jazz_2.wav; sourceTree = "<group>"; };
+		D4D341B91CE306E70050F2E3 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		D4D7F1A318E53E1200234274 /* campaign-button-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "campaign-button-pressed.png"; sourceTree = "<group>"; };
 		D4D7F1A418E53E1200234274 /* campaign-button-pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "campaign-button-pressed@2x.png"; sourceTree = "<group>"; };
 		D4D7F1A518E53E1200234274 /* campaign-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "campaign-button.png"; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4D341BA1CE306E70050F2E3 /* GameKit.framework in Frameworks */,
 				D42F6A691810A29700F198CB /* CoreGraphics.framework in Frameworks */,
 				D42F6A6B1810A29700F198CB /* UIKit.framework in Frameworks */,
 				D42F6A671810A29700F198CB /* Foundation.framework in Frameworks */,
@@ -460,6 +463,7 @@
 		D42F6A651810A29700F198CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D4D341B91CE306E70050F2E3 /* GameKit.framework */,
 				D42F6A661810A29700F198CB /* Foundation.framework */,
 				D42F6A681810A29700F198CB /* CoreGraphics.framework */,
 				D42F6A6A1810A29700F198CB /* UIKit.framework */,

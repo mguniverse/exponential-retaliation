@@ -10,8 +10,9 @@
 #import "jsJiggle.h"
 #import <AVFoundation/AVFoundation.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import <GameKit/GameKit.h>
 
-@interface ViewController : UIViewController {
+@interface ViewController : UIViewController <GKGameCenterControllerDelegate> {
     int currentSelection;
     int buttonRadius;
     

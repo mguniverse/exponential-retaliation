@@ -13,6 +13,12 @@
 
 @interface ViewController ()
 
+// A flag indicating whether the Game Center features can be used after a user has been authenticated.
+@property (nonatomic) BOOL gameCenterEnabled;
+
+// This property stores the default leaderboard's identifier.
+@property (nonatomic, strong) NSString *leaderboardIdentifier;
+
 @end
 
 @implementation ViewController
@@ -85,8 +91,45 @@
     return self;
 }
 
+-(void)authenticateLocalPlayer{
+    GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
+    
+    localPlayer.authenticateHandler = ^(UIViewController *viewController, NSError *error){
+        if (viewController != nil) {
+            [self presentViewController:viewController animated:YES completion:nil];
+        }
+        else{
+            if ([GKLocalPlayer localPlayer].authenticated) {
+                _gameCenterEnabled = YES;
+                
+                // Get the default leaderboard identifier.
+                [[GKLocalPlayer localPlayer] loadDefaultLeaderboardIdentifierWithCompletionHandler:^(NSString *leaderboardIdentifier, NSError *error) {
+                    
+                    if (error != nil) {
+                        NSLog(@"%@", [error localizedDescription]);
+                    }
+                    else{
+                        _leaderboardIdentifier = leaderboardIdentifier;
+                    }
+                }];
+            }
+            
+            else{
+                _gameCenterEnabled = NO;
+            }
+        }
+    };
+}
+
+-(void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController
+{
+    [gameCenterViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (void)viewDidLoad
 {
+    [self authenticateLocalPlayer];
+    
     buttonRadius = 10;
     animationSpeed = 0.5;
     nucleus = [[jsJiggle alloc]initWithObject:nucleusImage];
