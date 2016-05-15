@@ -795,6 +795,9 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Danny Perski";
 				TargetAttributes = {
+					D42F6A621810A29700F198CB = {
+						DevelopmentTeam = CL35ZTCQNT;
+					};
 					D42F6A861810A29700F198CB = {
 						TestTargetID = D42F6A621810A29700F198CB;
 					};
