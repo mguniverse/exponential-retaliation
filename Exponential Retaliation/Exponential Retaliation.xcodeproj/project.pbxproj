@@ -33,6 +33,7 @@
 		D407D1B518B5DED5003D3840 /* code@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D407D1B318B5DED5003D3840 /* code@2x.png */; };
 		D407D1B818B5E01D003D3840 /* check-button.png in Resources */ = {isa = PBXBuildFile; fileRef = D407D1B618B5E01D003D3840 /* check-button.png */; };
 		D407D1B918B5E01D003D3840 /* check-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D407D1B718B5E01D003D3840 /* check-button@2x.png */; };
+		D40B23F41D1A23C8008C7461 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40B23F31D1A23C8008C7461 /* ViewController_iPad.xib */; };
 		D4141A7F1A8F14AD00B20DCF /* tower-piece-1.png in Resources */ = {isa = PBXBuildFile; fileRef = D4141A791A8F14AD00B20DCF /* tower-piece-1.png */; };
 		D4141A801A8F14AD00B20DCF /* tower-piece-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4141A7A1A8F14AD00B20DCF /* tower-piece-1@2x.png */; };
 		D4141A811A8F14AD00B20DCF /* tower-piece-2.png in Resources */ = {isa = PBXBuildFile; fileRef = D4141A7B1A8F14AD00B20DCF /* tower-piece-2.png */; };
@@ -109,7 +110,6 @@
 		D48EB4801A8DF04C00EBDB15 /* Options_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = D48EB47E1A8DF04C00EBDB15 /* Options_iPhone.xib */; };
 		D491D32F1851C73400E8C16B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D491D32D1851C73400E8C16B /* ViewController.m */; };
 		D491D3301851C73400E8C16B /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = D491D32E1851C73400E8C16B /* ViewController_iPhone.xib */; };
-		D491D3351851C77400E8C16B /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D491D3331851C77400E8C16B /* ViewController_iPad.xib */; };
 		D491D3391851C9FC00E8C16B /* Levels_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = D491D3371851C9FC00E8C16B /* Levels_iPhone.m */; };
 		D491D33A1851C9FC00E8C16B /* Levels_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = D491D3381851C9FC00E8C16B /* Levels_iPhone.xib */; };
 		D4C234471B7E759000B42AA6 /* music-off.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C234431B7E759000B42AA6 /* music-off.png */; };
@@ -230,6 +230,7 @@
 		D407D1B318B5DED5003D3840 /* code@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "code@2x.png"; sourceTree = "<group>"; };
 		D407D1B618B5E01D003D3840 /* check-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check-button.png"; sourceTree = "<group>"; };
 		D407D1B718B5E01D003D3840 /* check-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check-button@2x.png"; sourceTree = "<group>"; };
+		D40B23F31D1A23C8008C7461 /* ViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController_iPad.xib; sourceTree = "<group>"; };
 		D4141A791A8F14AD00B20DCF /* tower-piece-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tower-piece-1.png"; sourceTree = "<group>"; };
 		D4141A7A1A8F14AD00B20DCF /* tower-piece-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tower-piece-1@2x.png"; sourceTree = "<group>"; };
 		D4141A7B1A8F14AD00B20DCF /* tower-piece-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tower-piece-2.png"; sourceTree = "<group>"; };
@@ -314,7 +315,6 @@
 		D491D32C1851C73400E8C16B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D491D32D1851C73400E8C16B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D491D32E1851C73400E8C16B /* ViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController_iPhone.xib; sourceTree = "<group>"; };
-		D491D3331851C77400E8C16B /* ViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController_iPad.xib; sourceTree = "<group>"; };
 		D491D3361851C9FC00E8C16B /* Levels_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Levels_iPhone.h; sourceTree = "<group>"; };
 		D491D3371851C9FC00E8C16B /* Levels_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Levels_iPhone.m; sourceTree = "<group>"; usesTabs = 0; };
 		D491D3381851C9FC00E8C16B /* Levels_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Levels_iPhone.xib; sourceTree = "<group>"; };
@@ -481,9 +481,9 @@
 				D491D32C1851C73400E8C16B /* ViewController.h */,
 				D491D32D1851C73400E8C16B /* ViewController.m */,
 				D491D32E1851C73400E8C16B /* ViewController_iPhone.xib */,
-				D491D3331851C77400E8C16B /* ViewController_iPad.xib */,
 				D491D3361851C9FC00E8C16B /* Levels_iPhone.h */,
 				D491D3371851C9FC00E8C16B /* Levels_iPhone.m */,
+				D40B23F31D1A23C8008C7461 /* ViewController_iPad.xib */,
 				D491D3381851C9FC00E8C16B /* Levels_iPhone.xib */,
 				D457696918B4A55100A084A3 /* Editor_iPhone.h */,
 				D457696A18B4A55100A084A3 /* Editor_iPhone.m */,
@@ -846,7 +846,6 @@
 				D4DE68A81AA128730095473D /* tweet.png in Resources */,
 				D4541A98192ECF2E00B51554 /* restart-pressed@2x.png in Resources */,
 				D4EDEBC018B764DF00EEB7F8 /* check-button-pressed.png in Resources */,
-				D491D3351851C77400E8C16B /* ViewController_iPad.xib in Resources */,
 				D4DE68D91AA2AFA30095473D /* about.png in Resources */,
 				D457696D18B4A55100A084A3 /* Editor_iPhone.xib in Resources */,
 				D48C69F818B77255001EFD33 /* header-bar@2x.png in Resources */,
@@ -956,6 +955,7 @@
 				D4DE69091AA46DEE0095473D /* nucleus.png in Resources */,
 				D48C6A0518B77255001EFD33 /* selected-piece@2x.png in Resources */,
 				D4D7F1B018E53F6500234274 /* editor-button-pressed@2x.png in Resources */,
+				D40B23F41D1A23C8008C7461 /* ViewController_iPad.xib in Resources */,
 				D4DE68891A9464E60095473D /* doubler-piece@2x.png in Resources */,
 				D48C6A0818B77255001EFD33 /* tool-bar.png in Resources */,
 				D402D56E18BABC8D001793E6 /* play-button-pressed@2x.png in Resources */,
